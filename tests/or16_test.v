@@ -1,8 +1,8 @@
-module and16_test;
+module or16_test;
   reg [15:0] a, b;
   wire [15:0] out;
 
-  student_and16 dut (.a(a), .b(b), .out(out));
+  student_or16 dut (.a(a), .b(b), .out(out));
 
   initial begin
     $display("|        a         |        b         |       out        |");
