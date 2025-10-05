@@ -1,17 +1,18 @@
 module not_test;
-  reg a;
+  reg in;
   wire out;
 
-  student_not dut (.a(a), .out(out));
+  student_not dut (.in(in), .out(out));
 
   initial begin
-    $display("| a |out|");
+    $display("|in|out|");
 
-    a = 0;
-    #1 $display("| %d | %d |", a, out);
+    in = 0;
+    #1 $display("|%b|%b|", in, out);
 
-    a = 1;
-    #2 $display("| %d | %d |", a, out);
-    $finish;
+    in = 1;
+    #2 $display("|%b|%b|", in, out);
+
+  $finish;
   end
 endmodule

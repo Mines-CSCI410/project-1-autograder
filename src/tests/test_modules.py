@@ -26,7 +26,7 @@ class TestBase(unittest.TestCase):
         out = open(f'/tmp/{name}.out', 'w')
         subprocess.call(['vvp', f'/tmp/{name}_test.vvp'], stdout=out)
 
-        res = subprocess.call(['diff', f'/tmp/{name}.out', f'/autograder/grader/tests/expected-outputs/{name}.cmp', '-qs', '--strip-trailing-cr'])
+        res = subprocess.call(['diff', f'/tmp/{name}.out', f'/autograder/grader/tests/expected-outputs/{name}.cmp', '-qsw', '--strip-trailing-cr'])
         if res != 0:
             raise AssertionError('Module output does not mach the expected output!')
 

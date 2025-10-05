@@ -5,23 +5,23 @@ module not16_test;
   student_not16 dut (.in(in), .out(out));
 
   initial begin
-    $display("|        in        |       out        |");
+    $display("|in|out|");
 
     in = 'b0000000000000000;
-    #1 $display("| %d | %d |", in, out);
+    #1 $display("|%b|%b|", in, out);
 
     in = 'b1111111111111111;
-    #2 $display("| %d | %d |", in, out);
+    #2 $display("|%b|%b|", in, out);
 
     in = 'b1010101010101010;
-    #3 $display("| %d | %d |", in, out);
+    #3 $display("|%b|%b|", in, out);
 
     in = 'b0011110011000011;
-    #4 $display("| %d | %d |", in, out);
+    #4 $display("|%b|%b|", in, out);
 
     in = 'b0001001000110100;
-    #5 $display("| %d | %d |", in, out);
+    #5 $display("|%b|%b|", in, out);
 
-    $finish;
+  $finish;
   end
 endmodule

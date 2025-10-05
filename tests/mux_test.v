@@ -5,39 +5,48 @@ module mux_test;
   student_mux dut (.a(a), .b(b), .sel(sel), .out(out));
 
   initial begin
-    $display("| a | b |sel|out|");
+    $display("|a|b|sel|out|");
 
     a = 0;
     b = 0;
     sel = 0;
-    #1 $display("| %d | %d | %d | %d |", a, b, sel, out);
+    #1 $display("|%b|%b|%b|%b|", a, b, sel, out);
 
+    a = 0;
+    b = 0;
     sel = 1;
-    #2 $display("| %d | %d | %d | %d |", a, b, sel, out);
+    #2 $display("|%b|%b|%b|%b|", a, b, sel, out);
 
     a = 0;
     b = 1;
     sel = 0;
-    #3 $display("| %d | %d | %d | %d |", a, b, sel, out);
+    #3 $display("|%b|%b|%b|%b|", a, b, sel, out);
 
+    a = 0;
+    b = 1;
     sel = 1;
-    #4 $display("| %d | %d | %d | %d |", a, b, sel, out);
+    #4 $display("|%b|%b|%b|%b|", a, b, sel, out);
 
     a = 1;
     b = 0;
     sel = 0;
-    #5 $display("| %d | %d | %d | %d |", a, b, sel, out);
+    #5 $display("|%b|%b|%b|%b|", a, b, sel, out);
 
+    a = 1;
+    b = 0;
     sel = 1;
-    #6 $display("| %d | %d | %d | %d |", a, b, sel, out);
+    #6 $display("|%b|%b|%b|%b|", a, b, sel, out);
 
     a = 1;
     b = 1;
     sel = 0;
-    #7 $display("| %d | %d | %d | %d |", a, b, sel, out);
+    #7 $display("|%b|%b|%b|%b|", a, b, sel, out);
 
+    a = 1;
+    b = 1;
     sel = 1;
-    #8 $display("| %d | %d | %d | %d |", a, b, sel, out);
-    $finish;
+    #8 $display("|%b|%b|%b|%b|", a, b, sel, out);
+
+  $finish;
   end
 endmodule
