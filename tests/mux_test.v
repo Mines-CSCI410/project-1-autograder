@@ -47,6 +47,6 @@ module mux_test;
     sel = 1;
     #8 $display("|%b|%b|%b|%b|", a, b, sel, out);
 
-  $finish;
+    $finish;
   end
 endmodule

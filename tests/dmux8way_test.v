@@ -72,6 +72,6 @@ module dmux8way_test;
     sel = 'b111;
     #16 $display("|%b|%b|%b|%b|%b|%b|%b|%b|%b|%b|", in, sel, a, b, c, d, e, f, g, h);
 
-  $finish;
+    $finish;
   end
 endmodule

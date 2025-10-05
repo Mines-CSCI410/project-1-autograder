@@ -22,6 +22,6 @@ module or8way_test;
     in = 'b00100110;
     #5 $display("|%b|%b|", in, out);
 
-  $finish;
+    $finish;
   end
 endmodule

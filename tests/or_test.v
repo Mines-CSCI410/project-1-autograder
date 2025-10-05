@@ -23,6 +23,6 @@ module or_test;
     b = 1;
     #4 $display("|%b|%b|%b|", a, b, out);
 
-  $finish;
+    $finish;
   end
 endmodule

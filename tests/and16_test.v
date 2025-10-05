@@ -31,6 +31,6 @@ module and16_test;
     b = 'b1001100001110110;
     #6 $display("|%b|%b|%b|", a, b, out);
 
-  $finish;
+    $finish;
   end
 endmodule

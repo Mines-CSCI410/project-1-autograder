@@ -64,6 +64,6 @@ module mux4way16_test;
     sel = 'b11;
     #8 $display("|%b|%b|%b|%b|%b|%b|", a, b, c, d, sel, out);
 
-  $finish;
+    $finish;
   end
 endmodule
