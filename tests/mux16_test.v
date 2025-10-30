@@ -46,7 +46,5 @@ module mux16_test;
     b = 'b0101010101010101;
     sel = 1;
     #8 $display("|%b|%b|%b|%b|", a, b, sel, out);
-
-    $finish;
   end
 endmodule

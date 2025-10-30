@@ -12,7 +12,5 @@ module not_test;
 
     in = 1;
     #2 $display("|%b|%b|", in, out);
-
-    $finish;
   end
 endmodule

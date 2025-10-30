@@ -15,7 +15,7 @@ do
     }
 
     iverilog -o /tmp/${TEST}_test.vvp ${TEST}_test.v ../*.v
-    vvp /tmp/${TEST}_test.vvp 2> /dev/null | head -n -1 1> /tmp/${TEST}.out 2> /dev/null
+    vvp /tmp/${TEST}_test.vvp 2> /dev/null 1> /tmp/${TEST}.out 2> /dev/null
     diff /tmp/${TEST}.out expected-outputs/${TEST}.cmp -qsw --strip-trailing-cr &> /dev/null && echo "${TEST^^} Test Passed"
 done
 

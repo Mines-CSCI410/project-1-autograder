@@ -71,7 +71,5 @@ module dmux4way_test;
     c = 0;
     d = 1;
     #8 $display("|%b|%b|%b|%b|%b|%b|", in, sel, a, b, c, d);
-
-    $finish;
   end
 endmodule

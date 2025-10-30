@@ -183,7 +183,5 @@ module mux8way16_test;
     h = 'b1000100110101011;
     sel = 'b111;
     #16 $display("|%b|%b|%b|%b|%b|%b|%b|%b|%b|%b|", a, b, c, d, e, f, g, h, sel, out);
-
-    $finish;
   end
 endmodule

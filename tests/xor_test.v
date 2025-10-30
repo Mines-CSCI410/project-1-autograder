@@ -22,7 +22,5 @@ module xor_test;
     a = 1;
     b = 1;
     #4 $display("|%b|%b|%b|", a, b, out);
-
-    $finish;
   end
 endmodule

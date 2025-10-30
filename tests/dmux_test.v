@@ -22,7 +22,5 @@ module dmux_test;
     in = 1;
     sel = 1;
     #4 $display("|%b|%b|%b|%b|", in, sel, a, b);
-
-    $finish;
   end
 endmodule

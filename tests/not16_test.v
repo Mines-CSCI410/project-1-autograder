@@ -21,7 +21,5 @@ module not16_test;
 
     in = 'b0001001000110100;
     #5 $display("|%b|%b|", in, out);
-
-    $finish;
   end
 endmodule
