@@ -1,5 +1,6 @@
 module mux16_test;
-  reg [15:0] a, b, sel;
+  reg [15:0] a, b;
+  reg sel;
   wire [15:0] out;
 
   student_mux16 dut (.a(a), .b(b), .sel(sel), .out(out));
