@@ -13,10 +13,15 @@ do
         echo "${TEST}.v not found"
         continue
     }
+    [[ ! -s ./${TEST}_test.v ]] && {
+        echo "${TEST}_test.v not found"
+        continue
+    }
 
-    iverilog -o /tmp/${TEST}_test.vvp ${TEST}_test.v ../*.v
+    LIB_FILES=$(ls ../*.v | awk '{print "-l " $0}' | xargs)
+    iverilog -o /tmp/${TEST}_test.vvp ${TEST}_test.v ${LIB_FILES} -l ./nand.v
     vvp /tmp/${TEST}_test.vvp 2> /dev/null 1> /tmp/${TEST}.out 2> /dev/null
-    diff /tmp/${TEST}.out expected-outputs/${TEST}.cmp -qsw --strip-trailing-cr &> /dev/null && echo "${TEST^^} Test Passed"
+    diff /tmp/${TEST}.out expected-outputs/${TEST}.cmp -qsw --strip-trailing-cr &> /dev/null && echo "${TEST^^} Test Passed" || echo "${TEST^^} Test Failed"
 done
 
 popd &> /dev/null
