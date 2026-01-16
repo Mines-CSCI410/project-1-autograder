@@ -2,7 +2,6 @@ import re
 import unittest
 import subprocess
 import glob
-from os import path
 
 from gradescope_utils.autograder_utils.decorators import weight, number
 
