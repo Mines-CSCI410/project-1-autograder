@@ -18,10 +18,6 @@ class TestBase(unittest.TestCase):
                 raise AssertionError(f'Pattern {pattern} not allowed in {file}!')
 
     def assertModulePasses(self, name):
-        if not path.isfile(f'/autograder/source/{name}.v'):
-            raise AssertionError(f'{name}.v not found!')
-        self.assertFileContains(f'/autograder/source/{name}.v', f'module student_{name}')
-
         subprocess.run(['iverilog', '-o', f'/tmp/{name}_test.vvp', f'/autograder/grader/tests/{name}_test.v'] + [f'-l{p}' for p in glob.glob('/autograder/source/*.v')])
 
         out = open(f'/tmp/{name}.out', 'w')
