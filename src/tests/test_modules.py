@@ -38,6 +38,11 @@ class TestModules(TestBase):
         self.assertModulePasses('or')
 
     @weight(95/15)
+    @number(3)
+    def test_xor(self):
+        self.assertModulePasses('xor')
+
+    @weight(95/15)
     @number(4)
     def test_not(self):
         self.assertModulePasses('not')
@@ -69,31 +74,26 @@ class TestModules(TestBase):
 
     @weight(95/15)
     @number(10)
-    def test_xor(self):
-        self.assertModulePasses('xor16')
-
-    @weight(95/15)
-    @number(11)
     def test_mux16(self):
         self.assertModulePasses('mux16')
 
     @weight(95/15)
-    @number(12)
+    @number(11)
     def test_mux4way16(self):
         self.assertModulePasses('mux4way16')
 
     @weight(95/15)
-    @number(13)
+    @number(12)
     def test_mux8way16(self):
         self.assertModulePasses('mux8way16')
 
     @weight(95/15)
-    @number(14)
+    @number(13)
     def test_dmux4way(self):
         self.assertModulePasses('dmux4way')
 
     @weight(95/15)
-    @number(15)
+    @number(14)
     def test_dmux8way(self):
         self.assertModulePasses('dmux8way')
 
