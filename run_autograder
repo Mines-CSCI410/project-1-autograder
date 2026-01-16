@@ -3,6 +3,6 @@
 cd /autograder/grader
 mkdir /autograder/results
 mkdir /autograder/source
-cp /autograder/submission/*.v /autograder/source/
+cp /autograder/submission/**/*.v /autograder/source/
 
 uv run src/run_tests.py
